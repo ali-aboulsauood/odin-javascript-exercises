@@ -1,13 +1,9 @@
 const repeatString = function(string, numberOfTimes) {
+    if (+numberOfTimes < 0) return 'ERROR';
+
     let resultString = "";
 
-    if (+numberOfTimes < 0) {
-        return 'ERROR';
-    }
-
-    for (let i = 1; i <= numberOfTimes; i++) {
-        resultString += string;
-    }
+    for (let i = 1; i <= numberOfTimes; i++) resultString += string;
 
     return resultString;
 };

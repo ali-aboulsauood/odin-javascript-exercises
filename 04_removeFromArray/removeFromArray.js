@@ -14,12 +14,18 @@ const removeFromArray = function(array, ...elementsToRemove) {
 
 // A common convention is to name the rest parameter `args`.
 
+/*
 const removeFromArray = function(array, ...elementsToRemove) {
     let newArray = [];
 
     array.forEach((element) => { if (!elementsToRemove.includes(element)) newArray.push(element); });
 
     return newArray;
+}
+*/
+
+const removeFromArray = function(array, ...elementsToRemove) {
+    return array.filter(element => !elementsToRemove.includes(element));
 }
 
 // Do not edit below this line

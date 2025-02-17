@@ -1,3 +1,4 @@
+/*
 const removeFromArray = function(array, ...elementsToRemove) {
     let newArray = [];
 
@@ -9,6 +10,17 @@ const removeFromArray = function(array, ...elementsToRemove) {
 
     return newArray;
 };
+*/
+
+// A common convention is to name the rest parameter `args`.
+
+const removeFromArray = function(array, ...elementsToRemove) {
+    let newArray = [];
+
+    array.forEach((element) => { if (!elementsToRemove.includes(element)) newArray.push(element); });
+
+    return newArray;
+}
 
 // Do not edit below this line
 module.exports = removeFromArray;

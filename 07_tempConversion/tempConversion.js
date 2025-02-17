@@ -6,7 +6,7 @@ const convertToCelsius = function(tempInFahrenheit) {
 };
 
 const convertToFahrenheit = function(tempInCelsius) {
-  let tempInFahrenheit = tempInCelsius * (9 / 5) + 32;
+  const tempInFahrenheit = tempInCelsius * (9 / 5) + 32;
 
   // The method `Number.toFixed` returns a String.
   return +tempInFahrenheit.toFixed(1);

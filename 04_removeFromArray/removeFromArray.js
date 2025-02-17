@@ -1,7 +1,13 @@
-const removeFromArray = function(array, elementToRemove) {
-    const indexOfElementToRemove = array.indexOf(elementToRemove);
+const removeFromArray = function(array, ...elementsToRemove) {
+    let newArray = [];
 
-    return array.slice(0, indexOfElementToRemove).concat(array.slice(indexOfElementToRemove + 1));
+    for (const element of array) {
+        if (elementsToRemove.includes(element)) continue;
+
+        newArray.push(element);
+    }
+
+    return newArray;
 };
 
 // Do not edit below this line
